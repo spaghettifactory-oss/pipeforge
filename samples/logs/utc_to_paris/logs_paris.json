@@ -1,0 +1,22 @@
+[
+  {
+    "level": "INFO",
+    "message": "Server started",
+    "timestamp": "2024-01-15T09:30:00+01:00"
+  },
+  {
+    "level": "WARN",
+    "message": "High memory usage",
+    "timestamp": "2024-01-15T13:45:00+01:00"
+  },
+  {
+    "level": "ERROR",
+    "message": "Connection timeout",
+    "timestamp": "2024-01-16T00:15:00+01:00"
+  },
+  {
+    "level": "INFO",
+    "message": "Backup completed",
+    "timestamp": "2024-07-20T16:00:00+02:00"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {"level": "INFO", "message": "User login", "timestamp": "2024-01-15T08:15:00Z"},
+  {"level": "INFO", "message": "User logout", "timestamp": "2024-01-15T08:45:00Z"},
+  {"level": "WARN", "message": "Slow query", "timestamp": "2024-01-15T08:55:00Z"},
+  {"level": "ERROR", "message": "Connection lost", "timestamp": "2024-01-15T09:10:00Z"},
+  {"level": "INFO", "message": "Reconnected", "timestamp": "2024-01-15T09:12:00Z"},
+  {"level": "INFO", "message": "Cache cleared", "timestamp": "2024-01-15T10:00:00Z"},
+  {"level": "WARN", "message": "High CPU", "timestamp": "2024-01-15T10:30:00Z"},
+  {"level": "WARN", "message": "High memory", "timestamp": "2024-01-15T10:45:00Z"},
+  {"level": "ERROR", "message": "Out of memory", "timestamp": "2024-01-15T10:50:00Z"},
+  {"level": "INFO", "message": "Service restarted", "timestamp": "2024-01-15T11:00:00Z"}
+]

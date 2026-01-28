@@ -1,0 +1,17 @@
+[
+  {
+    "store_name": "Tech Shop Paris",
+    "stock": [
+      {"name": "Laptop", "pricing": 999},
+      {"name": "Phone", "pricing": 499},
+      {"name": "Tablet", "pricing": 349}
+    ]
+  },
+  {
+    "store_name": "Tech Shop Lyon",
+    "stock": [
+      {"name": "Monitor", "pricing": 299},
+      {"name": "Keyboard", "pricing": 79}
+    ]
+  }
+]

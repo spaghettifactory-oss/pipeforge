@@ -1,0 +1,32 @@
+# Build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# Coverage
+coverage.out
+coverage.html
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Samples output files
+samples/**/*_inflated.json
+samples/**/*_output.json
+samples/**/*_converted.json
+samples/**/*_fixed.json

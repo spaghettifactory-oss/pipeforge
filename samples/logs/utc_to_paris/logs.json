@@ -1,0 +1,6 @@
+[
+  {"level": "INFO", "message": "Server started", "timestamp": "2024-01-15T08:30:00Z"},
+  {"level": "WARN", "message": "High memory usage", "timestamp": "2024-01-15T12:45:00Z"},
+  {"level": "ERROR", "message": "Connection timeout", "timestamp": "2024-01-15T23:15:00Z"},
+  {"level": "INFO", "message": "Backup completed", "timestamp": "2024-07-20T14:00:00Z"}
+]
