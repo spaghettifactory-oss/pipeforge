@@ -3,8 +3,8 @@ package services
 import (
 	"errors"
 
-	"project/internal/core/domain"
-	"project/internal/core/ports"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/ports"
 )
 
 type DataPipeline struct {

@@ -1,4 +1,4 @@
-module project
+module github.com/spaghettifactory-oss/pipeforge
 
 go 1.25.6
 

@@ -5,10 +5,10 @@ import (
 	"log"
 	"sort"
 
-	mockstore "project/internal/adapters/mock/store"
-	"project/internal/adapters/source"
-	"project/internal/core/domain"
-	"project/internal/core/services"
+	mockstore "github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/store"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/source"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/services"
 )
 
 func main() {

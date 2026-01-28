@@ -1,0 +1,64 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: '1.25'
+
+      - name: Run unit tests
+        run: go test ./... -v
+
+  sample-inflation:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/run-sample-test
+        with:
+          sample-path: samples/stocks/inflation/test.sh
+
+  sample-inflation-complex:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/run-sample-test
+        with:
+          sample-path: samples/stocks/inflation_complex_object/test.sh
+
+  sample-filter-products:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/run-sample-test
+        with:
+          sample-path: samples/stocks/filter_products/test.sh
+
+  sample-utc-to-paris:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/run-sample-test
+        with:
+          sample-path: samples/logs/utc_to_paris/test.sh
+
+  sample-count-by-hour:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/run-sample-test
+        with:
+          sample-path: samples/logs/count_by_hour/test.sh
