@@ -3,9 +3,9 @@ package services
 import (
 	"testing"
 
-	"project/internal/adapters/mock/source"
-	"project/internal/adapters/mock/store"
-	"project/internal/adapters/mock/transform"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/source"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/store"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/transform"
 
 	"github.com/stretchr/testify/assert"
 )

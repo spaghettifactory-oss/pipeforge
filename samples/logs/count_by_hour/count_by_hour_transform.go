@@ -1,7 +1,7 @@
 package main
 
 import (
-	"project/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
 )
 
 // CountByHourTransform aggregates logs by hour frame using Reduce.

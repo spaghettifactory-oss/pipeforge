@@ -3,8 +3,8 @@ package transform
 import (
 	"testing"
 
-	"project/internal/adapters/mock/transform"
-	"project/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/transform"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -1,0 +1,27 @@
+name: 'Run Sample Test'
+description: 'Run a sample test with Go and jq'
+
+inputs:
+  sample-path:
+    description: 'Path to the sample test.sh'
+    required: true
+  go-version:
+    description: 'Go version to use'
+    required: false
+    default: '1.25'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install jq
+      shell: bash
+      run: sudo apt-get update && sudo apt-get install -y jq
+
+    - name: Setup Go
+      uses: actions/setup-go@v6
+      with:
+        go-version: ${{ inputs.go-version }}
+
+    - name: Run sample test
+      shell: bash
+      run: bash ${{ inputs.sample-path }}

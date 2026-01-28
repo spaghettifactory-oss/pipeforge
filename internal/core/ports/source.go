@@ -1,6 +1,6 @@
 package ports
 
-import "project/internal/core/domain"
+import "github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
 
 // SourcePort defines the interface for loading data from external sources.
 type SourcePort interface {

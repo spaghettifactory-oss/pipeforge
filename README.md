@@ -13,7 +13,7 @@ A lightweight, type-safe data pipeline library for Go built on hexagonal archite
 ## Installation
 
 ```bash
-go get github.com/spaghettifactory-oss/data-pipeline
+go get github.com/spaghettifactory-oss/pipeforge
 ```
 
 ## Quick Start
@@ -22,10 +22,10 @@ go get github.com/spaghettifactory-oss/data-pipeline
 package main
 
 import (
-    "project/internal/adapters/source"
-    "project/internal/adapters/store"
-    "project/internal/core/domain"
-    "project/internal/core/services"
+    "github.com/spaghettifactory-oss/pipeforge/internal/adapters/source"
+    "github.com/spaghettifactory-oss/pipeforge/internal/adapters/store"
+    "github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+    "github.com/spaghettifactory-oss/pipeforge/internal/core/services"
 )
 
 func main() {

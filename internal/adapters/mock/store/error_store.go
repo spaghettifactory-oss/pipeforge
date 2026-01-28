@@ -3,7 +3,7 @@ package store
 import (
 	"errors"
 
-	"project/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
 )
 
 type ErrorStore struct{}

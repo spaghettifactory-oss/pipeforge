@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"log"
 
-	"project/internal/adapters/source"
-	"project/internal/adapters/store"
-	"project/internal/adapters/transform"
-	"project/internal/core/domain"
-	"project/internal/core/services"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/source"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/store"
+	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/transform"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/internal/core/services"
 )
 
 func main() {
