@@ -5,11 +5,11 @@ import (
 	"log"
 	"time"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/source"
-	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/store"
-	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/transform"
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/services"
+	"github.com/spaghettifactory-oss/pipeforge/adapters/source"
+	"github.com/spaghettifactory-oss/pipeforge/adapters/store"
+	"github.com/spaghettifactory-oss/pipeforge/adapters/transform"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
+	"github.com/spaghettifactory-oss/pipeforge/pipeline"
 )
 
 func main() {
@@ -30,7 +30,7 @@ func main() {
 	}
 
 	// Create the pipeline
-	pipeline := services.DataPipeline{
+	p := pipeline.DataPipeline{
 		Source: source.NewJSONSource("samples/logs/utc_to_paris/logs.json", logSchema),
 		Transform: transform.NewTransformBuilder().
 			Add(tzTransform).
@@ -39,7 +39,7 @@ func main() {
 	}
 
 	// Run the pipeline
-	result, err := pipeline.RunWithResult()
+	result, err := p.RunWithResult()
 	if err != nil {
 		log.Fatalf("Pipeline failed: %v", err)
 	}

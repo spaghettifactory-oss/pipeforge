@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
 )
 
 // FixNegativeStockTransform resets negative stock values to 0.

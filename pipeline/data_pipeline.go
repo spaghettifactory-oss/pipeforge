@@ -1,10 +1,10 @@
-package services
+package pipeline
 
 import (
 	"errors"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/ports"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
+	"github.com/spaghettifactory-oss/pipeforge/ports"
 )
 
 type DataPipeline struct {

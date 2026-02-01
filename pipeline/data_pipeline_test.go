@@ -1,11 +1,11 @@
-package services
+package pipeline
 
 import (
 	"testing"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/source"
-	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/store"
-	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/transform"
+	"github.com/spaghettifactory-oss/pipeforge/internal/mock/source"
+	"github.com/spaghettifactory-oss/pipeforge/internal/mock/store"
+	"github.com/spaghettifactory-oss/pipeforge/internal/mock/transform"
 
 	"github.com/stretchr/testify/assert"
 )

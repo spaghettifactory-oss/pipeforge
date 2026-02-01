@@ -3,7 +3,7 @@ package transform
 import (
 	"fmt"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
 )
 
 // AddIntTransform adds a fixed integer value to a specified int field in each record.

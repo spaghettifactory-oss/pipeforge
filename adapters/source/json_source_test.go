@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
