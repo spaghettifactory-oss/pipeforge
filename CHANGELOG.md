@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.3.0
+
+### Added
+
+#### Domain - Sync Package
+- `domain/sync` package for record comparison and delta detection
+- `FieldChangeType` enum: `FieldUnchanged`, `FieldAdded`, `FieldUpdated`, `FieldDeleted`
+- `RecordChangeType` enum: `RecordUnchanged`, `RecordAdded`, `RecordModified`, `RecordDeleted`
+- `FieldDelta` for field-level change tracking
+- `RecordDelta` for record-level change tracking with field details
+- `RecordSetDelta` for comparing entire RecordSets
+- `CompareRecords()` for comparing two records
+- `CompareRecordSets()` for comparing two RecordSets by index
+- `RecordsEqual()` for checking record equality
+- `WithArrayKey()` option for key-based array element matching
+- `DeltaSummary` with counts: Added, Modified, Deleted, Unchanged, Total
+
+#### Samples
+- `stocks/delta_demo` - Delta comparison with filter and transform
+
+## v0.2.0
+
+### Changed
+
+#### Internal Structure
+- Reorganized internal package structure
+- Improved code organization
+
 ## v0.1.0
 
 ### Added
