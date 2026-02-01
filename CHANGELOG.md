@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - `RecordsEqual()` for checking record equality
 - `WithArrayKey()` option for key-based array element matching
 - `DeltaSummary` with counts: Added, Modified, Deleted, Unchanged, Total
+- `ToRecordSet()` to convert delta into standard RecordSet for storage/processing
 
 #### Samples
 - `stocks/delta_demo` - Delta comparison with filter and transform
