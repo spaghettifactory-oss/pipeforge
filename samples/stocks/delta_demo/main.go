@@ -5,6 +5,7 @@ import (
 	"log"
 
 	"github.com/spaghettifactory-oss/pipeforge/adapters/source"
+	"github.com/spaghettifactory-oss/pipeforge/adapters/store"
 	"github.com/spaghettifactory-oss/pipeforge/domain"
 	"github.com/spaghettifactory-oss/pipeforge/domain/sync"
 )
@@ -98,6 +99,23 @@ func main() {
 			}
 		}
 	}
+
+	// Convert delta to RecordSet (for storage/PITR)
+	fmt.Println("\n=== DELTA AS RECORDSET ===")
+	deltaRecordSet := delta.ToRecordSet()
+	fmt.Printf("Schema: %s\n", deltaRecordSet.Schema.ID)
+	fmt.Printf("Records: %d\n", len(deltaRecordSet.Records))
+
+	for _, record := range deltaRecordSet.Records {
+		fmt.Printf("\n  [%d] %s\n", record.GetInt("index"), record.GetString("change_type"))
+	}
+
+	// Save delta to file
+	deltaStore := store.NewJSONStore("samples/stocks/delta_demo/delta.json")
+	if err := deltaStore.Store(deltaRecordSet); err != nil {
+		log.Fatalf("Failed to save delta: %v", err)
+	}
+	fmt.Println("\nDelta saved to samples/stocks/delta_demo/delta.json")
 }
 
 // transformStores filters products >= 50 pricing and applies x3

@@ -106,4 +106,25 @@ if ! echo "$OUTPUT" | grep -q "=== DELTA WITH KEY-BASED MATCHING"; then
     exit 1
 fi
 
+# Verify delta as recordset section
+if ! echo "$OUTPUT" | grep -q "=== DELTA AS RECORDSET ==="; then
+    echo "FAIL: Missing DELTA AS RECORDSET section"
+    exit 1
+fi
+
+if ! echo "$OUTPUT" | grep -q "Schema: Delta"; then
+    echo "FAIL: Expected Schema: Delta"
+    exit 1
+fi
+
+# Verify delta.json was created
+DELTA_FILE="$SCRIPT_DIR/delta.json"
+if [[ ! -f "$DELTA_FILE" ]]; then
+    echo "FAIL: delta.json not created"
+    exit 1
+fi
+
+# Clean up generated file
+rm -f "$DELTA_FILE"
+
 echo "PASS: All validations successful"
