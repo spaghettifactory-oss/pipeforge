@@ -5,10 +5,10 @@ import (
 	"log"
 	"sort"
 
-	mockstore "github.com/spaghettifactory-oss/pipeforge/internal/adapters/mock/store"
-	"github.com/spaghettifactory-oss/pipeforge/internal/adapters/source"
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/services"
+	mockstore "github.com/spaghettifactory-oss/pipeforge/internal/mock/store"
+	"github.com/spaghettifactory-oss/pipeforge/adapters/source"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
+	"github.com/spaghettifactory-oss/pipeforge/pipeline"
 )
 
 func main() {
@@ -23,14 +23,14 @@ func main() {
 	}
 
 	// Create the pipeline with CountByHourTransform
-	pipeline := services.DataPipeline{
+	p := pipeline.DataPipeline{
 		Source:    source.NewJSONSource("samples/logs/count_by_hour/logs.json", logSchema),
 		Transform: &CountByHourTransform{},
 		Store:     &mockstore.EmptyStore{},
 	}
 
 	// Run the pipeline
-	result, err := pipeline.RunWithResult()
+	result, err := p.RunWithResult()
 	if err != nil {
 		log.Fatalf("Pipeline failed: %v", err)
 	}

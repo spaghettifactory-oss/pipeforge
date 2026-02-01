@@ -3,7 +3,7 @@ package transform
 import (
 	"errors"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
 )
 
 type ErrorTransform struct{}

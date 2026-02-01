@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
 )
 
 // TimezoneTransform converts a date field from one timezone to another.

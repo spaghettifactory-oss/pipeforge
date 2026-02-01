@@ -1,6 +1,6 @@
 package ports
 
-import "github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+import "github.com/spaghettifactory-oss/pipeforge/domain"
 
 // TransformPort defines the interface for transforming data.
 type TransformPort interface {

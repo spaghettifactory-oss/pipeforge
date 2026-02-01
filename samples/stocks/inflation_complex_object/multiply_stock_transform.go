@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
 )
 
 // MultiplyStockTransform multiplies pricing in nested stock arrays.

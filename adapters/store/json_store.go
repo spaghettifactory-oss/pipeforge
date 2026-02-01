@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
 )
 
 // JSONStore writes a RecordSet to a JSON file.

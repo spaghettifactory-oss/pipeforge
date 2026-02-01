@@ -1,6 +1,6 @@
 package store
 
-import "github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+import "github.com/spaghettifactory-oss/pipeforge/domain"
 
 type EmptyStore struct{}
 

@@ -1,8 +1,8 @@
 package transform
 
 import (
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
-	"github.com/spaghettifactory-oss/pipeforge/internal/core/ports"
+	"github.com/spaghettifactory-oss/pipeforge/domain"
+	"github.com/spaghettifactory-oss/pipeforge/ports"
 )
 
 // TransformBuilder allows chaining multiple transforms into a single pipeline.

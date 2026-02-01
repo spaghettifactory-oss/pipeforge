@@ -1,6 +1,6 @@
 package ports
 
-import "github.com/spaghettifactory-oss/pipeforge/internal/core/domain"
+import "github.com/spaghettifactory-oss/pipeforge/domain"
 
 // StorePort defines the interface for storing/writing data.
 type StorePort interface {
